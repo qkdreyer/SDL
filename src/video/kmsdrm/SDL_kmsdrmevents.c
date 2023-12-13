@@ -333,6 +333,7 @@ static void KMSDRM_PumpInputDev(_THIS, int fd, const char *path)
 
 void KMSDRM_PumpEvents(_THIS)
 {
+#if 0
 	drm_input_dev *devs;
 
 	for (devs = this->hidden->keyboards; devs; devs = devs->next)
@@ -340,4 +341,5 @@ void KMSDRM_PumpEvents(_THIS)
 
 	for (devs = this->hidden->mice; devs; devs = devs->next)
 		KMSDRM_PumpInputDev(this, devs->fd, devs->path);
+#endif
 }
